@@ -8,7 +8,7 @@ resource "aws_instance" "terraform_created" {
   }
 }
 resource "aws_vpc" "myvpc" {
-  cidr_block = "13.14.0.0/24"
+  cidr_block = "20.14.0.0/24"
   count      = 0
 }
 
