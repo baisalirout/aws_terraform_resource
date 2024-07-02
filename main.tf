@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 #Terraform alias: Multiple provider configuration
-provider "aws"{
+provider "aws" {
   region = "us-east-1"
-  alias ="NVgnia"
+  alias  = "NVgnia"
 }

@@ -1,4 +1,8 @@
-variable "ami" {
+variable "ami_canada" {
+  type = string
+}
+
+variable "ami_NVgnia" {
   type = string
 }
 
@@ -8,8 +12,13 @@ variable "instance_type" {
 }
 
 variable "instance_count" {
-  type = number
+  type    = number
+  default = 1
 }
-variable "instance_name" {
+variable "instance_name_canada" {
+  type = string
+}
+
+variable "instance_name_Nvgnia" {
   type = string
 }

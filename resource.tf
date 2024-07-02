@@ -1,29 +1,26 @@
 resource "aws_instance" "canada" {
-  ami           = var.ami
+  ami           = var.ami_canada
   instance_type = var.instance_type
   count         = var.instance_count
   tags = {
-    Name = var.instance_name
+    Name = var.instance_name_canada
 
   }
 }
-resource "aws_instance" "NVgnia"{
-   ami           = var.ami
+resource "aws_instance" "NVgnia" {
+  ami           = var.ami_NVgnia
   instance_type = var.instance_type
   count         = var.instance_count
   tags = {
-    Name = var.instance_name
+    Name = var.instance_name_Nvgnia
 
-}
-provider = aws.NVgnia
+  }
+  provider = aws.NVgnia
 }
 
-resource "aws_vpc" "myvpc" {
-  cidr_block = "20.14.0.0/24"
-  count      = 0
-}
+
 
 resource "aws_s3_bucket" "mybucket" {
-  bucket = "my-tf-425715272"
+  bucket = "my-tf-4250715272"
   count  = 0
 }
