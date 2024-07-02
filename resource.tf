@@ -1,4 +1,4 @@
-resource "aws_instance" "terraform_created" {
+resource "aws_instance" "canada" {
   ami           = var.ami
   instance_type = var.instance_type
   count         = var.instance_count
@@ -7,6 +7,17 @@ resource "aws_instance" "terraform_created" {
 
   }
 }
+resource "aws_instance" "NVgnia"{
+   ami           = var.ami
+  instance_type = var.instance_type
+  count         = var.instance_count
+  tags = {
+    Name = var.instance_name
+
+}
+provider = aws.NVgnia
+}
+
 resource "aws_vpc" "myvpc" {
   cidr_block = "20.14.0.0/24"
   count      = 0

@@ -10,3 +10,9 @@ terraform {
 provider "aws" {
   region = "ca-central-1"
 }
+
+#Terraform alias: Multiple provider configuration
+provider "aws"{
+  region = "us-east-1"
+  alias ="NVgnia"
+}
