@@ -6,6 +6,11 @@ resource "aws_instance" "canada" {
     Name = var.instance_name_canada
 
   }
+   timeouts {
+    create = "60m"
+  }
+
+
 }
 resource "aws_instance" "NVgnia" {
   ami           = var.ami_NVgnia
